@@ -2,7 +2,7 @@ let button = document.getElementById('cookie');
 let scoreOnScreen = document.getElementById('label');
 let score = 0;
 let multiplyButton = document.createElement('button');
-let section = document.getElementById('section');
+let section = document.getElementById('multi-button');
 let increse = 1;
 let multiplier = 2;
 let cost = 10;
@@ -14,22 +14,25 @@ let bonusMultiplier = 20;
 section.appendChild(autoClicker);
 section.appendChild(bonusClicker);
 
-function zeroScore(){if(score < 0) { score = 0}}
+function zeroScore(){
+    if(score < 0) {
+         score = 0;
+        }
+    }
 
 
 multiplyButton.innerHTML = `multiply ${multiplier} cost ${cost}`
 section.appendChild(multiplyButton);
-
 button.addEventListener('click', function () {
     score += increse;
     scoreOnScreen.innerHTML = score;
-    
+    zeroScore()
 })
 
 multiplyButton.addEventListener('click', function(){
     increse *= multiplier;
     score = score - cost;
-    zeroScore
+    zeroScore()
     scoreOnScreen.innerHTML = score;
     cost *= multiplier
     multiplyButton.innerHTML = `multiply ${multiplier} cost ${cost}`
@@ -39,7 +42,7 @@ multiplyButton.addEventListener('click', function(){
 autoClicker.innerHTML = `automultiply ${autoMultiplier}cookies cost ${cost}`
 autoClicker.addEventListener('click', function(){
     score = score - cost;
-    zeroScore
+    zeroScore()
     setInterval(function() {
         score += autoMultiplier;
         scoreOnScreen.innerHTML = score;
@@ -50,7 +53,7 @@ autoClicker.addEventListener('click', function(){
 bonusClicker.innerHTML = `bonusmultiply ${bonusMultiplier}cookies cost ${cost}`
 bonusClicker.addEventListener('click', function(){
     score = score - cost;
-    zeroScore
+    zeroScore()
     let myvar = setInterval(function() {
         score += bonusMultiplier;
         scoreOnScreen.innerHTML = score;

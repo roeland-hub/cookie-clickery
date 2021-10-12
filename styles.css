@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-image: url(img/background-cookie.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.title {
+    font-family: 'Staatliches', cursive;
+    font-size: 4rem;
+    margin: 6vh auto 0 auto;
+    text-align: center;
+}
+
+.score {
+    font-size: 2rem;
+    background-color: aliceblue;
+    border: 5px solid black ;
+    border-style: double;
+    border-radius: 10px;
+    width: 30vw;
+    height: 5vh;
+    margin: 4vh auto 0 auto;
+    padding: 0 auto;
+    text-align: center;
+}
+
+.cookie-img {
+    margin-top: 4vh;
+    background-color: darkgoldenrod;
+    background-image: url(img/cookie.png);
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+button {
+    margin: 1vh 3px;
+    padding: 8px;
+    height: 60px;
+    border-radius: 10px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh auto;
+}
+
+
